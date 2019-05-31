@@ -120,7 +120,7 @@ class QLearningAgent:
 
 def __main__():
     agent = QLearningAgent()
-    for i in range(100):
+    while True:
         mean_max_tile = 0
         for _ in range(20):
             agent.learn()
@@ -128,7 +128,7 @@ def __main__():
             #print(mT, agent.weights)
             mean_max_tile += mT
         print(mean_max_tile / 20)
-        print(len(agent.Q))
+        #print(len(agent.Q))
 
 
     # print(agent.weights)
